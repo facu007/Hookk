@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Hooke Studio - Identidad antes que algoritmo</title>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF2D55'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z'/%3E%3C/svg%3E">
+</head>
+<body class="antialiased selection:bg-soft-blush selection:text-primary min-h-screen flex flex-col relative bg-background text-primary">
+  
+  <!-- Custom Magnetic Cursor Follower -->
+  <div id="hooke-cursor" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden lg:block -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out">
+    <div id="hooke-cursor-glow" class="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-vibrant-pink/0 blur-md transition-all duration-300"></div>
+    <div id="hooke-cursor-visual" class="absolute h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary bg-transparent transition-all duration-300"></div>
+  </div>
+
+  <!-- TopAppBar Navigation -->
+  <header class="fixed z-50 bg-background/80 backdrop-blur-md w-full top-0 border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit h-20 transition-all duration-300">
+    <a class="font-headline-lg text-2xl md:text-headline-lg tracking-tighter text-primary select-none cursor-pointer router-link font-bold" data-page="home">HOOK</a>
+    
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="portfolio">Portfolio</a>
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="services">Services</a>
+      <a class="nav-link router-link text-primary font-bold border-b border-primary pb-1 font-label-caps text-label-caps uppercase text-xs" data-page="home">Manifesto</a>
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="contact">Contact</a>
+    </nav>
+    
+    <div class="flex items-center gap-4">
+      <a class="hidden md:inline-block border border-primary px-6 py-2.5 font-label-caps text-label-caps uppercase hover:bg-primary hover:text-pure-white transition-colors duration-300 text-xs router-link" data-page="contact">Inquire</a>
+      
+      <!-- Mobile menu trigger -->
+      <button id="mobile-menu-trigger" class="md:hidden text-primary flex items-center justify-center p-2">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-background flex flex-col justify-center items-center gap-8 p-8 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-primary flex items-center justify-center p-2">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="mobile-nav-link text-2xl font-headline-lg uppercase router-link" data-page="portfolio">Portfolio</a>
+    <a class="mobile-nav-link text-2xl font-headline-lg uppercase router-link" data-page="services">Services</a>
+    <a class="mobile-nav-link text-2xl font-headline-lg uppercase router-link font-bold border-b border-primary" data-page="home">Manifesto</a>
+    <a class="mobile-nav-link text-2xl font-headline-lg uppercase router-link" data-page="contact">Contact</a>
+    <a class="mt-8 border border-primary px-8 py-3 font-label-caps text-label-caps uppercase text-sm router-link" data-page="contact">Inquire Now</a>
+  </div>
+
+  <!-- Dynamic Content Canvas -->
+  <main id="app-canvas" class="flex-grow w-full pt-20">
+    <!-- Dynamic page templates render here -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-background border-t border-primary p-margin-mobile md:p-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-center gap-gutter">
+    <div class="font-label-caps text-label-caps tracking-widest text-primary text-xs uppercase font-bold text-left">
+      © 2024 HOOK Creative Studio. Identity Before Algorithm.
+    </div>
+    <div class="flex flex-wrap gap-6 text-xs font-label-caps uppercase tracking-[0.2em] font-bold">
+      <a class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+      <a class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+      <a class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">Behance</a>
+      <a class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <!-- Conversational Bot Hooke Assistant Launcher -->
+  <div id="hooke-assistant-launcher" class="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-primary text-pure-white flex items-center justify-center cursor-pointer shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
+    <span id="hooke-assistant-icon-chat" class="material-symbols-outlined text-2xl">spa</span>
+    <span id="hooke-assistant-icon-close" class="material-symbols-outlined text-2xl hidden">close</span>
+  </div>
+
+  <!-- Conversational Bot Hooke Assistant Drawer -->
+  <div id="hooke-assistant-chat" class="fixed right-0 bottom-0 top-0 w-full sm:w-[450px] bg-background border-l border-outline-variant/30 z-50 transform translate-x-full shadow-2xl flex flex-col">
+    <!-- Chat Header -->
+    <div class="h-20 border-b border-outline-variant/20 px-6 flex justify-between items-center bg-soft-blush">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-full bg-primary text-pure-white flex items-center justify-center">
+          <span class="material-symbols-outlined text-xl">spa</span>
+        </div>
+        <div class="text-left">
+          <h4 class="font-headline-lg-mobile text-[14px] font-bold text-primary leading-tight">Hooke Assistant</h4>
+          <span class="text-[9px] font-label-caps uppercase tracking-wider text-vibrant-pink font-bold">Estratega Visual</span>
+        </div>
+      </div>
+      <button id="hooke-assistant-close" class="text-primary hover:opacity-75 transition-opacity flex items-center justify-center p-2">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+
+    <!-- Message Stream -->
+    <div id="hooke-assistant-messages" class="flex-grow overflow-y-auto p-6 space-y-4 flex flex-col justify-start">
+      <!-- Bubbles populated dynamically by assistant.js -->
+    </div>
+
+    <!-- Input Box & Speech -->
+    <div class="p-4 border-t border-outline-variant/20 bg-background/50 backdrop-blur-md">
+      <div class="flex items-center gap-2 border border-outline/30 rounded-xl px-3 py-2 bg-surface">
+        <button id="hooke-assistant-mic" class="text-on-surface-variant hover:text-vibrant-pink p-1 flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined">mic</span>
+        </button>
+        <input id="hooke-assistant-input" class="flex-grow bg-transparent border-0 outline-none text-xs focus:ring-0 px-1 py-1 text-primary placeholder-on-surface-variant/40" placeholder="Escribe tu consulta estratégica..."/>
+        <button id="hooke-assistant-send" class="h-8 w-8 rounded-lg bg-primary text-pure-white flex items-center justify-center hover:opacity-90 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-sm">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

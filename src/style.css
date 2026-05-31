@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f9f9f9;
+    color: #000000;
+  }
+}
+
+/* Custom Magnetism and Cursor Styles */
+#hooke-cursor {
+  mix-blend-mode: difference;
+}
+
+#hooke-cursor-visual {
+  width: 14px;
+  height: 14px;
+  border-width: 1.5px;
+  border-color: #ffffff; /* Contrast on difference */
+}
+
+/* Hard Shadows for Editorial collage aesthetic */
+.hard-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+/* Vertical Text writing mode */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Custom Message Stream Animations */
+.animate-message {
+  animation: messageSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Speech-to-text mic recording pulse */
+.mic-recording {
+  animation: micPulse 1.5s infinite;
+  color: #FF2D55 !important;
+}
+
+@keyframes micPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Assistant scroll lock */
+body.assistant-open {
+  overflow: hidden;
+}
+
+/* Typing Indicator Animation */
+.typing-dot {
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+  }
+}
+
+/* Customized scrollbar for conversation */
+#hooke-assistant-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+#hooke-assistant-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#hooke-assistant-messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+
+/* Custom transition animations for client-side pages */
+.page-fade-out {
+  animation: fadeOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.page-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Gap Utilities to improve mobile content pacing */
+.py-section-gap {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.mt-section-gap {
+  margin-top: 80px;
+}
+.mb-section-gap {
+  margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .py-section-gap {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  .mt-section-gap {
+    margin-top: 160px;
+  }
+  .mb-section-gap {
+    margin-bottom: 160px;
+  }
+}
+
