@@ -1,5 +1,5 @@
 import { renderHome, setupHome } from './pages/home.js';
-import { renderServices } from './pages/services.js';
+import { renderServices, setupServices } from './pages/services.js';
 import { renderPortfolio } from './pages/portfolio.js';
 import { renderContact } from './pages/contact.js';
 import { gsap } from 'gsap';
@@ -55,6 +55,9 @@ export function initRouter() {
         }
         if (pageName === 'home') {
           setupHome();
+        }
+        if (pageName === 'services') {
+          setupServices();
         }
 
         // Smooth scroll to top
