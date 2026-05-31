@@ -71,46 +71,23 @@
     </div>
   </footer>
 
-  <!-- Conversational Bot Hooke Assistant Launcher -->
-  <div id="hooke-assistant-launcher" class="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-primary text-pure-white flex items-center justify-center cursor-pointer shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
-    <span id="hooke-assistant-icon-chat" class="material-symbols-outlined text-2xl">spa</span>
-    <span id="hooke-assistant-icon-close" class="material-symbols-outlined text-2xl hidden">close</span>
-  </div>
-
-  <!-- Conversational Bot Hooke Assistant Drawer -->
-  <div id="hooke-assistant-chat" class="fixed right-0 bottom-0 top-0 w-full sm:w-[450px] bg-background border-l border-outline-variant/30 z-50 transform translate-x-full shadow-2xl flex flex-col">
-    <!-- Chat Header -->
-    <div class="h-20 border-b border-outline-variant/20 px-6 flex justify-between items-center bg-soft-blush">
-      <div class="flex items-center gap-3">
-        <div class="h-10 w-10 rounded-full bg-primary text-pure-white flex items-center justify-center">
-          <span class="material-symbols-outlined text-xl">spa</span>
-        </div>
-        <div class="text-left">
-          <h4 class="font-headline-lg-mobile text-[14px] font-bold text-primary leading-tight">Hooke Assistant</h4>
-          <span class="text-[9px] font-label-caps uppercase tracking-wider text-vibrant-pink font-bold">Estratega Visual</span>
-        </div>
+  <!-- Premium High-End Preloader -->
+  <div id="hooke-preloader" class="fixed inset-0 z-[10000] bg-black flex flex-col items-center justify-center text-pure-white select-none transition-all duration-700 ease-out">
+    <div class="flex flex-col items-center gap-4 max-w-md px-6 text-center">
+      <!-- Minimalist elegant logo text -->
+      <h2 id="preloader-brand" class="font-display-xl text-[54px] md:text-[72px] tracking-tighter leading-none text-pure-white uppercase font-bold opacity-0 translate-y-4">
+        HOOK
+      </h2>
+      <p id="preloader-subtitle" class="font-label-caps text-label-caps text-[10px] tracking-[0.3em] text-soft-blush uppercase opacity-0 font-bold translate-y-4">
+        Estudio Creativo
+      </p>
+      
+      <!-- Sleek linear progress bar -->
+      <div id="preloader-bar-container" class="w-48 bg-pure-white/10 h-0.5 mt-8 relative overflow-hidden opacity-0 translate-y-4">
+        <div id="preloader-bar-progress" class="absolute left-0 top-0 h-full w-0 bg-soft-blush"></div>
       </div>
-      <button id="hooke-assistant-close" class="text-primary hover:opacity-75 transition-opacity flex items-center justify-center p-2">
-        <span class="material-symbols-outlined text-2xl">close</span>
-      </button>
-    </div>
-
-    <!-- Message Stream -->
-    <div id="hooke-assistant-messages" class="flex-grow overflow-y-auto p-6 space-y-4 flex flex-col justify-start">
-      <!-- Bubbles populated dynamically by assistant.js -->
-    </div>
-
-    <!-- Input Box & Speech -->
-    <div class="p-4 border-t border-outline-variant/20 bg-background/50 backdrop-blur-md">
-      <div class="flex items-center gap-2 border border-outline/30 rounded-xl px-3 py-2 bg-surface">
-        <button id="hooke-assistant-mic" class="text-on-surface-variant hover:text-vibrant-pink p-1 flex items-center justify-center transition-colors">
-          <span class="material-symbols-outlined">mic</span>
-        </button>
-        <input id="hooke-assistant-input" class="flex-grow bg-transparent border-0 outline-none text-xs focus:ring-0 px-1 py-1 text-primary placeholder-on-surface-variant/40" placeholder="Escribe tu consulta estratégica..."/>
-        <button id="hooke-assistant-send" class="h-8 w-8 rounded-lg bg-primary text-pure-white flex items-center justify-center hover:opacity-90 active:scale-95 transition-all">
-          <span class="material-symbols-outlined text-sm">send</span>
-        </button>
-      </div>
+      
+      <span id="preloader-percentage" class="font-label-caps text-[9px] tracking-widest text-pure-white/40 opacity-0 translate-y-4">0%</span>
     </div>
   </div>
 

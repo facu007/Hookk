@@ -25,11 +25,7 @@ export function renderHome() {
         </p>
       </div>
 
-      <!-- Bouncing Scroll Indicator (White styled) -->
-      <div class="absolute bottom-10 left-margin-mobile md:left-margin-desktop z-20 flex items-center gap-4 animate-bounce text-pure-white">
-        <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs">Desplazar</span>
-        <span class="material-symbols-outlined text-sm">arrow_downward</span>
-      </div>
+
 
       <!-- Floating Glassmorphic Video Play/Pause Control -->
       <div class="absolute bottom-10 right-margin-mobile md:right-margin-desktop z-20">
