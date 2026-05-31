@@ -43,7 +43,7 @@ export function renderServices() {
     <section class="bg-primary text-pure-white py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden w-full">
       <div class="max-w-[1400px] mx-auto">
         <div class="flex flex-col md:flex-row gap-gutter justify-between items-start md:items-end mb-24 text-left">
-          <h2 class="font-display-xl text-[48px] sm:text-[64px] md:text-display-xl text-soft-blush opacity-90 leading-none font-bold">
+          <h2 class="font-display-xl text-[36px] xs:text-[42px] sm:text-[56px] md:text-display-xl text-soft-blush opacity-90 leading-none font-bold tracking-tight">
             METOD<br class="hidden md:block"/>OLOGÍA
           </h2>
           <p class="font-quote-it text-quote-it md:w-1/3 mb-4 text-outline-variant italic">
@@ -77,7 +77,7 @@ export function renderServices() {
               <h3 class="font-headline-lg-mobile text-[32px] sm:text-[40px] leading-tight mb-4 group-hover:text-soft-blush transition-colors font-semibold">Pre-producción</h3>
               <p class="font-body-md text-outline-variant text-xs opacity-80 leading-relaxed">Casting, scouting de locaciones, estilismo, set design y planificación técnica detallada.</p>
             </div>
-            <div class="w-full h-[200px] md:h-auto md:w-2/5 relative overflow-hidden hard-shadow bg-surface-variant/10 self-center flex items-center justify-center">
+            <div class="w-full aspect-[3/2] xs:aspect-[16/10] md:aspect-auto md:h-auto md:w-2/5 relative overflow-hidden hard-shadow bg-surface-variant/10 self-center flex items-center justify-center">
               <img alt="Gráfico editorial de la marca HOOK" class="w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-700" src="/fts/hook_editorial_graphic.png"/>
             </div>
           </div>
