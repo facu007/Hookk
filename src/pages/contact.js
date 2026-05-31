@@ -6,10 +6,10 @@ export function renderContact() {
         <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center text-left">
           <div class="md:col-span-4 order-2 md:order-1 flex flex-col justify-center">
             <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-6 leading-tight font-semibold">
-              Identity<br/>Before<br/>Algorithm.
+              Identidad<br/>antes que<br/>algoritmo.
             </h1>
             <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-md">
-              We design the image of brands and individuals with a creative and strategic perspective. We develop aesthetic identity, branding, visual communication, and coherent brand universes.
+              Diseñamos la imagen de marcas e individuos con una perspectiva creativa y estratégica. Desarrollamos identidad estética, branding, comunicación visual y universos de marca coherentes.
             </p>
             <div class="flex items-center gap-4">
               <span class="font-label-caps text-label-caps text-primary border border-primary px-4 py-2 uppercase tracking-widest text-[10px] font-bold">Estudio Creativo</span>
@@ -17,7 +17,7 @@ export function renderContact() {
           </div>
           <div class="md:col-span-8 order-1 md:order-2 relative group">
             <div class="absolute inset-0 bg-soft-blush translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 md:group-hover:translate-x-6 md:group-hover:translate-y-6 transition-transform duration-500"></div>
-            <img alt="Portrait of the creative directors" class="w-full h-[60vh] md:h-[80vh] object-cover grayscale border-b border-primary hard-shadow" src="/fts/img6.jpg"/>
+            <img alt="Retrato de las directoras creativas" class="w-full h-[60vh] md:h-[80vh] object-cover border-b border-primary hard-shadow" src="/fts/img6.jpg"/>
             <div class="absolute bottom-4 left-4 bg-background px-6 py-4 hard-shadow max-w-[85%] sm:max-w-md">
               <p class="font-quote-it text-quote-it italic text-primary text-sm sm:text-base leading-relaxed">
                 "A good production doesn't start with the camera. It starts long before."
@@ -36,7 +36,7 @@ export function renderContact() {
               ¿Qué identidad querés construir?
             </h2>
             <p class="font-body-md text-body-md text-outline-variant mb-12 opacity-80">
-              We curate intentional digital presences. Tell us about your vision.
+              Curamos presencias digitales con intención. Cuéntanos sobre tu visión.
             </p>
             <form class="space-y-8" id="inquiry-form">
               <div class="relative">
@@ -78,7 +78,7 @@ export function renderContact() {
           </div>
           <div class="lg:col-span-5 lg:col-start-8 hidden lg:flex items-center justify-center relative">
             <div class="w-full h-[600px] bg-surface-inverse relative hard-shadow">
-              <img alt="Minimalist still life of a sleek silver laptop on a pink table" class="w-full h-full object-cover grayscale opacity-80" src="/fts/img7.jpg"/>
+              <img alt="Bodegón minimalista de una laptop plateada sobre una mesa rosa" class="w-full h-full object-cover opacity-80" src="/fts/img7.jpg"/>
               <div class="absolute inset-0 bg-deep-gray/20 mix-blend-multiply"></div>
             </div>
           </div>

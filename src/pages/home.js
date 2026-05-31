@@ -4,9 +4,9 @@ export function renderHome() {
     <section class="min-h-screen flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-20 relative overflow-hidden bg-black text-pure-white">
       <!-- Full Screen Background Video Layer -->
       <div class="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
-        <video id="hero-editorial-video" autoplay muted loop playsinline class="w-full h-full object-cover grayscale contrast-125 opacity-70 z-0">
+        <video id="hero-editorial-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-70 z-0">
           <source src="/fts/puedes_quitar_esa_frase_del_vi.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          Tu navegador no soporta la etiqueta de video.
         </video>
         <!-- Overlay de gradientes oscuros para legibilidad cinemática -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 md:bg-gradient-to-r md:from-black/90 md:via-black/60 md:to-black/30 z-10"></div>
@@ -27,13 +27,13 @@ export function renderHome() {
 
       <!-- Bouncing Scroll Indicator (White styled) -->
       <div class="absolute bottom-10 left-margin-mobile md:left-margin-desktop z-20 flex items-center gap-4 animate-bounce text-pure-white">
-        <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs">Scroll</span>
+        <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs">Desplazar</span>
         <span class="material-symbols-outlined text-sm">arrow_downward</span>
       </div>
 
       <!-- Floating Glassmorphic Video Play/Pause Control -->
       <div class="absolute bottom-10 right-margin-mobile md:right-margin-desktop z-20">
-        <button id="hero-video-toggle" class="flex items-center justify-center h-12 w-12 rounded-full bg-pure-white/10 backdrop-blur-md border border-pure-white/20 text-pure-white hover:bg-pure-white/25 active:scale-95 transition-all duration-300 shadow-xl cursor-pointer" aria-label="Pause video">
+        <button id="hero-video-toggle" class="flex items-center justify-center h-12 w-12 rounded-full bg-pure-white/10 backdrop-blur-md border border-pure-white/20 text-pure-white hover:bg-pure-white/25 active:scale-95 transition-all duration-300 shadow-xl cursor-pointer" aria-label="Pausar video">
           <span class="material-symbols-outlined text-xl pointer-events-none">pause</span>
         </button>
       </div>
@@ -81,7 +81,7 @@ export function renderHome() {
           </div>
           <div class="lg:col-span-7 lg:order-1 relative">
             <div class="relative w-full aspect-video md:aspect-[16/9] hard-shadow bg-surface-tint">
-              <img alt="Tactile briefing design process" class="w-full h-full object-cover object-center grayscale mix-blend-luminosity opacity-90" src="/fts/img88.png"/>
+              <img alt="Tactile briefing design process" class="w-full h-full object-cover object-center opacity-90" src="/fts/img88.png"/>
               <div class="absolute top-0 right-0 h-full flex flex-col justify-between py-4 pr-4 text-right mix-blend-difference">
                 <span class="font-display-xl text-[60px] md:text-[80px] leading-none opacity-20 font-bold">01</span>
                 <span class="font-display-xl text-[60px] md:text-[80px] leading-none opacity-20 font-bold">02</span>
@@ -118,11 +118,11 @@ export function setupHome() {
   // We check if the video is successfully playing, otherwise set the play icon.
   video.play().then(() => {
     if (icon) icon.textContent = 'pause';
-    toggleBtn.setAttribute('aria-label', 'Pause video');
+    toggleBtn.setAttribute('aria-label', 'Pausar video');
   }).catch(err => {
     console.log('Autoplay deferred or blocked. User interaction required:', err);
     if (icon) icon.textContent = 'play_arrow';
-    toggleBtn.setAttribute('aria-label', 'Play video');
+    toggleBtn.setAttribute('aria-label', 'Reproducir video');
   });
 
   toggleBtn.addEventListener('click', () => {
@@ -130,12 +130,12 @@ export function setupHome() {
     if (video.paused) {
       video.play().then(() => {
         if (currentIcon) currentIcon.textContent = 'pause';
-        toggleBtn.setAttribute('aria-label', 'Pause video');
+        toggleBtn.setAttribute('aria-label', 'Pausar video');
       }).catch(err => console.log('Playback failed:', err));
     } else {
       video.pause();
       if (currentIcon) currentIcon.textContent = 'play_arrow';
-      toggleBtn.setAttribute('aria-label', 'Play video');
+      toggleBtn.setAttribute('aria-label', 'Reproducir video');
     }
   });
 }

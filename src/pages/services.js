@@ -4,11 +4,11 @@ export function renderServices() {
       <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center max-w-7xl mx-auto">
         <div class="md:col-span-7 relative">
           <div class="absolute -inset-4 bg-soft-blush -z-10 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4"></div>
-          <img alt="Editorial luxury blazer" class="w-full h-auto object-cover grayscale contrast-125 hard-shadow" src="/fts/img2.jpg"/>
+          <img alt="Blazer de lujo editorial" class="w-full h-auto object-cover hard-shadow" src="/fts/img2.jpg"/>
         </div>
         <div class="md:col-span-4 md:col-start-9 flex flex-col justify-center text-left">
           <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 leading-tight font-semibold">
-            Visual<br/>Identity.
+            Identidad<br/>Visual.
           </h1>
           <p class="font-body-md text-body-md text-on-surface-variant mb-12">
             Diseñamos la imagen de marcas y personas con una mirada creativa y estratégica. Desarrollamos identidad estética, branding, comunicación visual y universos de marca coherentes.
@@ -71,13 +71,15 @@ export function renderServices() {
             <p class="font-body-md text-outline-variant text-xs opacity-80 leading-relaxed">Creación de moodboards, referencias visuales y el hilo conductor narrativo que guiará la producción.</p>
           </div>
           <!-- Step 04 -->
-          <div class="bg-primary p-10 group hover:bg-neutral-900 transition-colors duration-500 md:col-span-2 relative overflow-hidden">
-            <div class="relative z-10 md:w-1/2">
-              <span class="font-label-caps text-label-caps text-soft-blush block mb-8 text-xs font-bold">04</span>
+          <div class="bg-primary p-8 md:p-10 group hover:bg-neutral-900 transition-colors duration-500 md:col-span-2 relative overflow-hidden flex flex-col md:flex-row gap-8 items-stretch">
+            <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+              <span class="font-label-caps text-label-caps text-soft-blush block mb-6 md:mb-8 text-xs font-bold">04</span>
               <h3 class="font-headline-lg-mobile text-[32px] sm:text-[40px] leading-tight mb-4 group-hover:text-soft-blush transition-colors font-semibold">Pre-producción</h3>
               <p class="font-body-md text-outline-variant text-xs opacity-80 leading-relaxed">Casting, scouting de locaciones, estilismo, set design y planificación técnica detallada.</p>
             </div>
-            <img alt="Behind the scenes briefing" class="absolute right-0 top-0 h-full w-1/2 object-cover object-left opacity-20 group-hover:opacity-40 transition-opacity duration-700 grayscale mix-blend-luminosity" src="/fts/img1.jpg"/>
+            <div class="w-full h-[200px] md:h-auto md:w-2/5 relative overflow-hidden hard-shadow bg-surface-variant/10 self-center flex items-center justify-center">
+              <img alt="Gráfico editorial de la marca HOOK" class="w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-700" src="/fts/hook_editorial_graphic.png"/>
+            </div>
           </div>
           <!-- Step 05 -->
           <div class="bg-primary p-10 group hover:bg-neutral-900 transition-colors duration-500">

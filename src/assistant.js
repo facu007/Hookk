@@ -246,8 +246,8 @@ export function initHookeAssistant() {
         <p class="font-bold mb-1 text-primary">Nuestras Transformaciones Editoriales</p>
         <p class="mb-2">Diseñamos bajo la premisa de "identidad antes que algoritmo", destacando:</p>
         <ul class="space-y-1.5 list-disc pl-4 mb-2">
-          <li><strong>Case Study 01 (Estilismo & Inspo):</strong> Redefinición cruda y premium de marca personal con fotografía de alto impacto.</li>
-          <li><strong>Case Study 02 (El Brief):</strong> Estructuración y conceptualización asimétrica de moodboards y estilismos limpios.</li>
+          <li><strong>Caso de Estudio 01 (Estilismo & Inspo):</strong> Redefinición cruda y premium de marca personal con fotografía de alto impacto.</li>
+          <li><strong>Caso de Estudio 02 (El Brief):</strong> Estructuración y conceptualización asimétrica de moodboards y estilismos limpios.</li>
         </ul>
       `);
 

@@ -2,10 +2,10 @@ export function renderPortfolio() {
   return `
     <section class="w-full px-margin-mobile md:px-margin-desktop pt-24 pb-16 flex flex-col items-center text-center max-w-7xl mx-auto">
       <h1 class="font-display-xl text-[48px] sm:text-[64px] md:text-display-xl text-primary max-w-5xl leading-none font-bold">
-        Identity Before Algorithm.
+        Identidad antes que algoritmo.
       </h1>
       <p class="mt-8 font-body-md text-body-md text-on-surface-variant max-w-2xl">
-        A curated selection of editorial transformations. We build coherent visual identities that prioritize intentionality over noise.
+        Una selección curada de transformaciones editoriales. Creamos identidades visuales coherentes que priorizan la intención sobre el ruido.
       </p>
     </section>
 
@@ -14,7 +14,7 @@ export function renderPortfolio() {
       <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center max-w-7xl mx-auto text-left">
         <!-- Text Content -->
         <div class="md:col-span-4 flex flex-col gap-6 order-2 md:order-1 relative z-10">
-          <span class="font-label-caps text-label-caps border border-primary px-3 py-1 inline-block w-max text-[10px] font-bold">Case Study 01</span>
+          <span class="font-label-caps text-label-caps border border-primary px-3 py-1 inline-block w-max text-[10px] font-bold">Caso de Estudio 01</span>
           <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-semibold leading-tight">
             Estilismo &amp; Inspo
           </h2>
@@ -33,7 +33,7 @@ export function renderPortfolio() {
         <!-- Imagery -->
         <div class="md:col-span-8 order-1 md:order-2 relative group">
           <div class="aspect-[4/5] md:aspect-[16/9] w-full overflow-hidden bg-surface-variant hard-shadow">
-            <img alt="Editorial shot showing styling and inspiration process" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale contrast-125" src="/fts/img4.jpg"/>
+            <img alt="Toma editorial que muestra el proceso de estilismo e inspiración" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/fts/img4.jpg"/>
           </div>
           <!-- Vertical Text Anchor -->
           <div class="absolute -right-4 top-1/2 -translate-y-1/2 hidden md:block mix-blend-difference z-20 pointer-events-none">
@@ -52,19 +52,19 @@ export function renderPortfolio() {
     <section class="w-full px-margin-mobile md:px-margin-desktop py-16 max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-deep-gray pb-6 text-left">
         <div>
-          <span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] font-bold">Case Study 02</span>
+          <span class="font-label-caps text-label-caps text-on-surface-variant text-[10px] font-bold">Caso de Estudio 02</span>
           <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-2 font-semibold">
             El Brief
           </h2>
         </div>
         <button class="hidden md:flex items-center gap-2 font-label-caps text-label-caps hover:opacity-70 transition-opacity text-xs font-bold uppercase router-link" data-page="contact">
-          Inquire About Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          Consultar sobre el proyecto <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </button>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter text-left">
         <!-- Large Image Block -->
         <div class="lg:col-span-8 group relative overflow-hidden bg-surface-variant hard-shadow aspect-video">
-          <img alt="Briefing and creative direction process" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale contrast-125" src="/fts/img5.jpg"/>
+          <img alt="Proceso de brief y dirección creativa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/fts/img5.jpg"/>
           <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <!-- Bento Stack -->
@@ -94,10 +94,10 @@ export function renderPortfolio() {
     <!-- CTA Section -->
     <section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col items-center text-center bg-deep-gray text-pure-white mt-section-gap">
       <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 max-w-3xl font-semibold leading-tight">
-        Ready to redefine your visual identity?
+        ¿Listo para redefinir tu identidad visual?
       </h2>
       <button class="font-label-caps text-label-caps tracking-widest border border-pure-white px-8 py-4 bg-pure-white text-primary hover:bg-transparent hover:text-pure-white transition-colors duration-300 text-xs font-bold uppercase router-link" data-page="contact">
-        Start a Project
+        Comenzar un proyecto
       </button>
     </section>
   `;
