@@ -93,7 +93,7 @@ export function initRouter() {
       if (page === activePage) {
         el.className = 'nav-link router-link text-primary dark:text-on-background font-bold border-b border-primary pb-1 font-label-caps text-label-caps uppercase text-xs cursor-pointer select-none';
       } else {
-        el.className = 'nav-link router-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs cursor-pointer select-none';
+        el.className = 'nav-link router-link text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase text-xs cursor-pointer select-none';
       }
     };
 

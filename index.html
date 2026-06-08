@@ -14,9 +14,9 @@
 <body class="antialiased selection:bg-soft-blush selection:text-primary min-h-screen flex flex-col relative bg-background text-primary">
   
   <!-- Custom Magnetic Cursor Follower -->
-  <div id="hooke-cursor" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden lg:block -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out">
-    <div id="hooke-cursor-glow" class="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-vibrant-pink/0 blur-md transition-all duration-300"></div>
-    <div id="hooke-cursor-visual" class="absolute h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary bg-transparent transition-all duration-300"></div>
+  <div id="hooke-cursor" class="pointer-events-none fixed left-0 top-0 z-[9999] hidden lg:block -translate-x-1/2 -translate-y-1/2">
+    <div id="hooke-cursor-glow" class="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-vibrant-pink/0 blur-md"></div>
+    <div id="hooke-cursor-visual" class="absolute h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary bg-transparent"></div>
   </div>
 
   <!-- TopAppBar Navigation -->
@@ -25,10 +25,10 @@
     
     <!-- Desktop Nav Links -->
     <nav class="hidden md:flex items-center gap-8">
-      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="portfolio">Portafolio</a>
-      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="services">Servicios</a>
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="portfolio">Portafolio</a>
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="services">Servicios</a>
       <a class="nav-link router-link text-primary font-bold border-b border-primary pb-1 font-label-caps text-label-caps uppercase text-xs" data-page="home">Manifiesto</a>
-      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-all duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="contact">Contacto</a>
+      <a class="nav-link router-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps uppercase text-xs" data-page="contact">Contacto</a>
     </nav>
     
     <div class="flex items-center gap-4">
@@ -42,7 +42,7 @@
   </header>
 
   <!-- Mobile Navigation Overlay Drawer -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-background flex flex-col justify-center items-center gap-8 p-8 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-background flex flex-col justify-center items-center gap-8 p-8 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden">
     <button id="mobile-menu-close" class="absolute top-6 right-6 text-primary flex items-center justify-center p-2">
       <span class="material-symbols-outlined text-3xl">close</span>
     </button>

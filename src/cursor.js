@@ -7,21 +7,21 @@ export function initCustomCursor() {
 
   if (!cursor || !glow || !visual) return;
 
-  // Track global coordinates
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
+  // Detect touch devices and disable custom cursor completely to prevent memory/performance issues on mobile
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  if (isTouchDevice) {
+    cursor.style.display = 'none';
+    window.refreshCursorListeners = function() {}; // No-op
+    return;
+  }
 
-  // Render on mouse movement
+  // Use gsap.quickTo for smooth cursor positioning with zero allocation overhead during mousemove
+  const xTo = gsap.quickTo(cursor, "x", { duration: 0.1, ease: "power2.out" });
+  const yTo = gsap.quickTo(cursor, "y", { duration: 0.1, ease: "power2.out" });
+
   window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    gsap.to(cursor, {
-      x: mouseX,
-      y: mouseY,
-      duration: 0.1,
-      ease: 'power2.out'
-    });
+    xTo(e.clientX);
+    yTo(e.clientY);
   });
 
   // Keep track of snapping state
@@ -37,8 +37,35 @@ export function initCustomCursor() {
       if (el.getAttribute('data-cursor-bound')) return;
       el.setAttribute('data-cursor-bound', 'true');
 
-      el.addEventListener('mousemove', (e) => {
+      let elXTo = null;
+      let elYTo = null;
+
+      el.addEventListener('mouseenter', () => {
         isSnapping = true;
+        // Instantiating quickTo setters only when entering the hover zone
+        elXTo = gsap.quickTo(el, "x", { duration: 0.3, ease: "power2.out" });
+        elYTo = gsap.quickTo(el, "y", { duration: 0.3, ease: "power2.out" });
+
+        // Expand custom cursor visuals (runs once per enter, not on move)
+        gsap.to(visual, {
+          scale: 1.5,
+          borderColor: '#FF2D55',
+          borderWidth: '2px',
+          duration: 0.3,
+          overwrite: 'auto'
+        });
+        
+        gsap.to(glow, {
+          scale: 2,
+          backgroundColor: '#FF2D55',
+          opacity: 0.25,
+          duration: 0.3,
+          overwrite: 'auto'
+        });
+      });
+
+      el.addEventListener('mousemove', (e) => {
+        if (!elXTo || !elYTo) return;
         
         // Element coordinates
         const rect = el.getBoundingClientRect();
@@ -49,39 +76,23 @@ export function initCustomCursor() {
         const dx = e.clientX - centerX;
         const dy = e.clientY - centerY;
 
-        // Magnetically pull the element slightly towards the mouse
-        gsap.to(el, {
-          x: dx * 0.22,
-          y: dy * 0.22,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
-
-        // Snap and expand custom cursor visuals
-        gsap.to(visual, {
-          scale: 1.5,
-          borderColor: '#FF2D55',
-          borderWidth: '2px',
-          duration: 0.3
-        });
-        
-        gsap.to(glow, {
-          scale: 2,
-          backgroundColor: '#FF2D55',
-          opacity: 0.25,
-          duration: 0.3
-        });
+        // Magnetically pull the element slightly towards the mouse using quickTo
+        elXTo(dx * 0.22);
+        elYTo(dy * 0.22);
       });
 
       el.addEventListener('mouseleave', () => {
         isSnapping = false;
+        elXTo = null;
+        elYTo = null;
 
         // Return element to center with springy elastic bounce
         gsap.to(el, {
           x: 0,
           y: 0,
           duration: 0.5,
-          ease: 'elastic.out(1.1, 0.4)'
+          ease: 'elastic.out(1.1, 0.4)',
+          overwrite: 'auto'
         });
 
         // Restore default cursor scales
@@ -89,14 +100,16 @@ export function initCustomCursor() {
           scale: 1,
           borderColor: '#ffffff',
           borderWidth: '1px',
-          duration: 0.3
+          duration: 0.3,
+          overwrite: 'auto'
         });
 
         gsap.to(glow, {
           scale: 1,
           backgroundColor: 'transparent',
           opacity: 0,
-          duration: 0.3
+          duration: 0.3,
+          overwrite: 'auto'
         });
       });
     });

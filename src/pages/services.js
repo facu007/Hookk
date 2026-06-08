@@ -15,7 +15,7 @@ export function renderServices() {
           </p>
           <ul class="flex flex-col gap-4 font-label-caps text-label-caps text-primary text-xs w-full">
             <!-- Item 1 -->
-            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-all duration-300 services-accordion-item text-left w-full select-none">
+            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-colors duration-300 services-accordion-item text-left w-full select-none">
               <div class="flex justify-between items-center w-full py-2 hover:opacity-70 transition-opacity">
                 <span class="font-bold tracking-widest text-[11px] sm:text-xs">Dirección Creativa</span>
                 <span class="material-symbols-outlined text-sm transition-transform duration-300 arrow-icon">expand_more</span>
@@ -27,7 +27,7 @@ export function renderServices() {
               </div>
             </li>
             <!-- Item 2 -->
-            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-all duration-300 services-accordion-item text-left w-full select-none">
+            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-colors duration-300 services-accordion-item text-left w-full select-none">
               <div class="flex justify-between items-center w-full py-2 hover:opacity-70 transition-opacity">
                 <span class="font-bold tracking-widest text-[11px] sm:text-xs">Branding &amp; Identidad</span>
                 <span class="material-symbols-outlined text-sm transition-transform duration-300 arrow-icon">expand_more</span>
@@ -39,7 +39,7 @@ export function renderServices() {
               </div>
             </li>
             <!-- Item 3 -->
-            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-all duration-300 services-accordion-item text-left w-full select-none">
+            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-colors duration-300 services-accordion-item text-left w-full select-none">
               <div class="flex justify-between items-center w-full py-2 hover:opacity-70 transition-opacity">
                 <span class="font-bold tracking-widest text-[11px] sm:text-xs">Producciones Visuales</span>
                 <span class="material-symbols-outlined text-sm transition-transform duration-300 arrow-icon">expand_more</span>
@@ -51,7 +51,7 @@ export function renderServices() {
               </div>
             </li>
             <!-- Item 4 -->
-            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-all duration-300 services-accordion-item text-left w-full select-none">
+            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-colors duration-300 services-accordion-item text-left w-full select-none">
               <div class="flex justify-between items-center w-full py-2 hover:opacity-70 transition-opacity">
                 <span class="font-bold tracking-widest text-[11px] sm:text-xs">Campañas</span>
                 <span class="material-symbols-outlined text-sm transition-transform duration-300 arrow-icon">expand_more</span>
@@ -63,7 +63,7 @@ export function renderServices() {
               </div>
             </li>
             <!-- Item 5 -->
-            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-all duration-300 services-accordion-item text-left w-full select-none">
+            <li class="border-b border-deep-gray pb-4 flex flex-col group cursor-pointer transition-colors duration-300 services-accordion-item text-left w-full select-none">
               <div class="flex justify-between items-center w-full py-2 hover:opacity-70 transition-opacity">
                 <span class="font-bold tracking-widest text-[11px] sm:text-xs">Estética Personal</span>
                 <span class="material-symbols-outlined text-sm transition-transform duration-300 arrow-icon">expand_more</span>
@@ -112,13 +112,10 @@ export function renderServices() {
           </div>
           <!-- Step 04 -->
           <div class="bg-primary p-8 md:p-10 group hover:bg-neutral-900 transition-colors duration-500 md:col-span-2 relative overflow-hidden flex flex-col md:flex-row gap-8 items-stretch">
-            <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+            <div class="w-full flex flex-col justify-center text-left">
               <span class="font-label-caps text-label-caps text-soft-blush block mb-6 md:mb-8 text-xs font-bold">04</span>
               <h3 class="font-headline-lg-mobile text-[32px] sm:text-[40px] leading-tight mb-4 group-hover:text-soft-blush transition-colors font-semibold">Pre-producción</h3>
               <p class="font-body-md text-outline-variant text-xs opacity-80 leading-relaxed">Casting, scouting de locaciones, estilismo, set design y planificación técnica detallada.</p>
-            </div>
-            <div class="hidden md:flex w-full md:aspect-auto md:h-auto md:w-2/5 relative overflow-hidden hard-shadow bg-surface-variant/10 self-center items-center justify-center">
-              <img alt="Gráfico editorial de la marca HOOK" class="w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-700" src="/fts/hook_editorial_graphic.png"/>
             </div>
           </div>
           <!-- Step 05 -->

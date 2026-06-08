@@ -29,7 +29,7 @@ export function renderHome() {
 
       <!-- Floating Glassmorphic Video Play/Pause Control -->
       <div class="absolute bottom-10 right-margin-mobile md:right-margin-desktop z-20">
-        <button id="hero-video-toggle" class="flex items-center justify-center h-12 w-12 rounded-full bg-pure-white/10 backdrop-blur-md border border-pure-white/20 text-pure-white hover:bg-pure-white/25 active:scale-95 transition-all duration-300 shadow-xl cursor-pointer" aria-label="Pausar video">
+        <button id="hero-video-toggle" class="flex items-center justify-center h-12 w-12 rounded-full bg-pure-white/10 backdrop-blur-md border border-pure-white/20 text-pure-white hover:bg-pure-white/25 active:scale-95 transition-colors duration-300 shadow-xl cursor-pointer" aria-label="Pausar video">
           <span class="material-symbols-outlined text-xl pointer-events-none">pause</span>
         </button>
       </div>
