@@ -48,10 +48,11 @@ export function renderHome() {
               Nosotros creemos que la verdadera diferenciación no viene de un filtro de moda, sino de una comprensión profunda de quién eres y cómo quieres ser percibido en el mundo.
             </p>
           </div>
-          <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
+          <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative group">
             <div class="bg-surface-container-highest w-full aspect-[3/4] hard-shadow relative overflow-hidden flex items-center justify-center p-8">
-              <div class="absolute inset-0 bg-primary mix-blend-overlay opacity-20"></div>
-              <span class="font-quote-it text-quote-it text-deep-gray italic">"Si te ves como todos, no eres nadie."</span>
+              <img src="/fts/img3.jpg" alt="Estética e identidad con intención" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 z-10 transition-opacity duration-500 group-hover:opacity-40"></div>
+              <span class="relative z-20 font-quote-it text-quote-it text-pure-white italic text-center">"Si te ves como todos, no eres nadie."</span>
             </div>
           </div>
         </div>
